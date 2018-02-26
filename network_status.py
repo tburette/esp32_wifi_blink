@@ -30,9 +30,9 @@ def led_blink(duration=30, blink_duration=1):
     else:
         loop_until = time.time() + duration
         while time.time() < loop_until:
-            pin_22.value(0)
+            led_on()
             time.sleep(blink_duration)
-            pin_22.value(1)
+            led_off()
             time.sleep(blink_duration)
 
 
